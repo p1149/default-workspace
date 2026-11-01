@@ -1,0 +1,100 @@
+{
+  "schema": "luolingwei.tools.index/1",
+  "generatedAt": "2026-10-30T20:19:00+08:00",
+  "generatedBy": "洛绫薇 · 工具列表场景",
+  "source": "tools/",
+  "total": 21,
+  "note": "机器可读工具索引；用途人类可读版见 框架/共享/工具维护.md。脚本本体改动归「底层改造」场景，本索引由「工具列表」场景维护（裁决：维持共享层，洛绫薇本体 2026-10-30 20:00）。",
+  "categories": [
+    {
+      "key": "env",
+      "name": "环境与构建",
+      "count": 2,
+      "tools": [
+        { "name": "msvc-env.ps1", "path": "tools/msvc-env.ps1", "type": "ps1", "purpose": "导入 MSVC + Windows SDK 环境到当前 PowerShell（vcvars 只影响当次进程）" },
+        { "name": "check-cpp.ps1", "path": "tools/check-cpp.ps1", "type": "ps1", "purpose": "C++ 工具链自检（cl/cmake/ninja/SDK），全过返回 0" }
+      ]
+    },
+    {
+      "key": "scene",
+      "name": "场景治理",
+      "count": 6,
+      "tools": [
+        { "name": "新建场景.ps1", "path": "tools/新建场景.ps1", "type": "ps1", "purpose": "按规范新建场景（六文件 + 卡指纹 + 场景索引插入一行）" },
+        { "name": "审计场景.ps1", "path": "tools/审计场景.ps1", "type": "ps1", "purpose": "审计场景是否符合构建/私有记忆/写回链三规范；-Scene 单场景，-All 全量" },
+        { "name": "归纳候选.ps1", "path": "tools/归纳候选.ps1", "type": "ps1", "purpose": "自动归纳辅助：从真实项目收集输入生成候选草稿（不写正式记忆）" },
+        { "name": "分发场景规范.ps1", "path": "tools/分发场景规范.ps1", "type": "ps1", "purpose": "把既有场景升级到新结构，旧内容保留在「历史（迁移前）」" },
+        { "name": "对账.ps1", "path": "tools/对账.ps1", "type": "ps1", "purpose": "每轮收尾对账五项（归档/记忆/健康/会话索引/看板）；-Fix 重建 archive/INDEX.md" },
+        { "name": "notify-scene.ps1", "path": "tools/notify-scene.ps1", "type": "ps1", "purpose": "给目标场景绑定会话发「请读任务看板、领取工作」通知" }
+      ]
+    },
+    {
+      "key": "customer",
+      "name": "客户交付",
+      "count": 1,
+      "tools": [
+        { "name": "新建客户目录.ps1", "path": "tools/新建客户目录.ps1", "type": "ps1", "purpose": "新建客户工作目录（客户卡 + 00_需求~04_记录）并登记客户登记表；-List 列出" }
+      ]
+    },
+    {
+      "key": "dsh",
+      "name": "DSH 运维",
+      "count": 6,
+      "tools": [
+        { "name": "update-dsh.ps1", "path": "tools/update-dsh.ps1", "type": "ps1", "purpose": "更新 DSH：杀旧进程 → 静默安装 → 重新拉起（须独立进程/计划任务）" },
+        { "name": "update-dsh-schedule.ps1", "path": "tools/update-dsh-schedule.ps1", "type": "ps1", "purpose": "登记一次性计划任务，N 秒后静默更新 DSH" },
+        { "name": "finish-dsh-update.ps1", "path": "tools/finish-dsh-update.ps1", "type": "ps1", "purpose": "更新收尾：新目录就位 → 旧目录改名 .old → 拉起新 DSH" },
+        { "name": "finish-dsh-update-schedule.ps1", "path": "tools/finish-dsh-update-schedule.ps1", "type": "ps1", "purpose": "上述收尾的延时计划任务版" },
+        { "name": "restart-dsh-elevated-task.ps1", "path": "tools/restart-dsh-elevated-task.ps1", "type": "ps1", "purpose": "提升权限重启 DSH（计划任务体，日志 D:\\dsh\\archives\\restart-dsh.log）" },
+        { "name": "dsh-watchdog.ps1", "path": "tools/dsh-watchdog.ps1", "type": "ps1", "purpose": "启动看门狗：启动 → 健康检测 → 不健康则回滚上次良好配置并重启；-CheckOnly 只检查" }
+      ]
+    },
+    {
+      "key": "media",
+      "name": "媒体与截图",
+      "count": 2,
+      "tools": [
+        { "name": "capture-window.ps1", "path": "tools/capture-window.ps1", "type": "ps1", "purpose": "只抓单个应用窗口存 PNG（不全屏截图）" },
+        { "name": "watch.ps1", "path": "tools/watch.ps1", "type": "ps1", "purpose": "视频拆帧（本地 ffmpeg / B站·YouTube 走 yt-dlp）供逐张看图" }
+      ]
+    },
+    {
+      "key": "record",
+      "name": "记录与归档",
+      "count": 3,
+      "tools": [
+        { "name": "make-archive.ps1", "path": "tools/make-archive.ps1", "type": "ps1", "purpose": "把工作区打成可交接归档包（暂存 → 清单 → zip → 校验和）" },
+        { "name": "merge-sessions.mjs", "path": "tools/merge-sessions.mjs", "type": "mjs", "purpose": "把工作区所有会话合并成一份 Markdown 记录（只读会话日志）" },
+        { "name": "备份会话档案.ps1", "path": "tools/备份会话档案.ps1", "type": "ps1", "purpose": "洛绫薇会话档案库：一键新建批次（robocopy sessions + projcache + workspace/schedule）→ MANIFEST/SHA256SUMS → 自动追加 INDEX" }
+      ]
+    },
+    {
+      "key": "rag",
+      "name": "RAG",
+      "count": 1,
+      "tools": [
+        { "name": "rag-proxy.mjs", "path": "tools/rag-proxy.mjs", "type": "mjs", "purpose": "OpenAI 兼容的洛绫薇 RAG 代理（11435 → Ollama 11434，注入框架记忆）" }
+      ]
+    }
+  ],
+  "chains": {
+    "cpp": { "note": "C++ 工具链", "items": ["cl", "cmake", "ninja", "msbuild", "vcpkg"] },
+    "media": { "note": "媒体工具链", "items": ["ffmpeg", "ffprobe", "yt-dlp"], "path": "D:\\dsh\\tools\\ffmpeg\\bin\\" },
+    "runtime": { "note": "运行时", "items": ["node", "pnpm", "ollama"] }
+  },
+  "decisions": {
+    "decidedBy": "洛绫薇本体",
+    "decidedAt": "2026-10-30T20:00:00+08:00",
+    "items": [
+      { "id": 1, "topic": ".py/.mjs 与「代码一律 .cpp」冲突", "result": "豁免（运行层工具脚本，不迁移）" },
+      { "id": 2, "topic": "工具索引位置", "result": "维持共享层 框架/共享/工具索引.json" },
+      { "id": 3, "topic": "索引自动生成器", "result": "暂不做（底层改造候选）" },
+      { "id": 4, "topic": "主人「2」本意复核", "result": "待主人复核，保留现状不回退" }
+    ]
+  },
+  "pending": [],
+  "removed": [
+    { "name": "make_sprite.py", "note": "0 字节空文件，2026-10-30 20:00 前后已清理（本次实测不存在）" }
+  ],
+  "exclude": ["tools/desktop.ini（系统文件，非工具）"]
+}

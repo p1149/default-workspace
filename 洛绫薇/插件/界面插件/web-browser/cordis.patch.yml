@@ -1,0 +1,3 @@
+- insert:
+    - id: web-browser
+      name: '@local/web-browser'

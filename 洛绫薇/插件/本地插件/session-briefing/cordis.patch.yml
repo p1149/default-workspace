@@ -1,0 +1,8 @@
+- insert:
+    - id: session-briefing
+      name: '@local/session-briefing'
+      config:
+        enabled: true
+        workspace: 'C:/Users/76927/Documents/deepseek-harness/default-workspace'
+        maxChars: 2400
+        boardReceipts: 2

@@ -1,0 +1,12 @@
+{
+  "name": "@local/evolve-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Config-only bundle: override dsh-auto-evolve to propose mode with a small daily budget.",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@local/session-briefing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH host plugin: 会话开场简报——每会话首次 pre-step 注入全局须知/场景/看板/健康/必读顺序（fail-open，只注入一次）",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": ["index.js", "cordis.patch.yml", "README.md"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

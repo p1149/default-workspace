@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Remote Control",
+    "description": "Open a control page on another device and drive the DSH UI over HTTP."
+  }
+}

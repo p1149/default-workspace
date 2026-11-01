@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Gallery",
+    "description": "Adds a Gallery entry to the left sidebar. Images you add manually or by auto-importing a folder are stored in this browser and shown in a grid with a full-size preview."
+  }
+}

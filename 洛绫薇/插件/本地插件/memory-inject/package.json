@@ -1,0 +1,17 @@
+{
+  "name": "@local/memory-inject",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Memory Inject: auto-inject the Luolingwei framework memory at session start.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}

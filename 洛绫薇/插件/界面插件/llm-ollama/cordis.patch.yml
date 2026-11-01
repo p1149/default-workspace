@@ -1,0 +1,5 @@
+- insert:
+    - id: llm-ollama
+      name: '@local/llm-ollama'
+      config:
+        baseURL: http://127.0.0.1:11434/v1

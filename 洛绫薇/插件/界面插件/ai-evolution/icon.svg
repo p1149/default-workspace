@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AI Infinite Evolution">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#14342B"/>
+  <path d="M32 13c8 0 14 6 14 14 0 5-2 8-5 11-2 2-3 4-3 7v2h-6v-3c0-4 1-7 4-10 2-2 3-4 3-6 0-4-3-7-7-7s-7 3-7 7c0 2 1 4 3 6 3 3 4 6 4 10v3h-6v-2c0-3-1-5-3-7-3-3-5-6-5-11 0-8 6-14 14-14Z" fill="#7EE0B3"/>
+  <circle cx="32" cy="26" r="4" fill="#14342B"/>
+  <path d="M32 30v10" stroke="#F4C95D" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="15" cy="15" r="2.6" fill="#F4C95D" opacity="0.8"/>
+  <circle cx="49" cy="15" r="2.6" fill="#F4C95D" opacity="0.8"/>
+</svg>

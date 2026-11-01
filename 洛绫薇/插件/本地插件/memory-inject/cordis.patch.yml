@@ -1,0 +1,7 @@
+- insert:
+    - id: memory-inject
+      name: '@local/memory-inject'
+      config:
+        enabled: true
+        maxItems: 3
+        maxChars: 300

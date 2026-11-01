@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Browser",
+    "description": "A sidebar web browser with address-bar search (Bing / Baidu), sandboxed page frames, URL history, favorites, and a configurable homepage. Direct image URLs are auto-saved to Gallery when the site allows cross-origin reads."
+  }
+}

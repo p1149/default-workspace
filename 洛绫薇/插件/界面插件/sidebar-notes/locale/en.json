@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Quick Notes",
+    "description": "Adds a Quick Notes entry to the left sidebar. The entry opens a scratchpad page whose text stays in this browser."
+  }
+}

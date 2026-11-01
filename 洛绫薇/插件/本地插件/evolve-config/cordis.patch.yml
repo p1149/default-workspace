@@ -1,0 +1,28 @@
+# Config-only bundle：把 dsh-auto-evolve 从「只观察」抬到「会提议」，
+# 但给定每日预算上限，验证通过前不自动上线。
+# 按 id 覆盖 -> 整个 config 被替换，所以这里写全量。
+- id: self-evolve
+  config:
+    mode: propose
+    observation:
+      toolFailureThreshold: 3
+      repeatThreshold: 3
+      requestErrorThreshold: 3
+      windowMs: 300000
+    proposal:
+      maxProposalsPerTrigger: 1
+      maxEpisodesPerProposal: 5
+      maxPromptChars: 24000
+      maxTokens: 2000
+    budget:
+      maxCostPerCycle: 0.1
+      dailyBudget: 0.5
+    validation:
+      maxTrialMs: 30000
+      maxToolCalls: 20
+      maxTrialSteps: 12
+      maxTrialTokens: 8000
+    evolution:
+      stallThreshold: 3
+      stallPauseMs: 1800000
+      cooldownMs: 600000

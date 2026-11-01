@@ -1,0 +1,5 @@
+# jump-session bundle patch: one Host row so the package loads; the browser half
+# binds to the same row through package.json's `dsh.client`.
+- insert:
+    - id: jump-session
+      name: '@local/jump-session'

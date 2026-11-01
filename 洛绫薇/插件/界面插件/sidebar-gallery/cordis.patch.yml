@@ -1,0 +1,3 @@
+- insert:
+    - id: sidebar-gallery
+      name: '@local/sidebar-gallery'
